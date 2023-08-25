@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "pgsql/queries"
+    schema: "pgsql/schema/schema.sql"
+    gen:
+      go:
+        package: "database"
+        out: "database"
+    database:
+      uri: "postgresql://postmaster:mika@localhost:5432/postgres"
